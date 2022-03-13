@@ -1,0 +1,167 @@
+* {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Outfit";
+    font-size: 16px;
+    color: var(--pc-soft-blue);
+}
+
+:root {
+    /* Primary Colors */
+    --pc-soft-blue: hsl(215, 51%, 70%);
+    --pc-cyan: hsl(178, 100%, 50%);
+
+    /* Neutral Colors */
+    --nc-mainbg: hsl(217, 54%, 11%);
+    --nc-cardbg: hsl(216, 50%, 16%);
+    --nc-seperator: hsl(215, 32%, 27%);
+    --nc-white: hsl(0, 0%, 100%);
+
+    /* Font Weights */
+    --fw-thin: 300;
+    --fw-regular: 400;
+    --fw-bold: 600;
+}
+
+
+
+.main-image-container:hover, .text-title:hover, .user-name:hover, .user-avatar:hover  {
+    cursor: pointer;
+}
+
+body {
+    background-color: var(--nc-mainbg);
+}
+
+.small-br {
+    border-radius: 10px;
+}
+
+
+
+.container {
+    background-color: var(--nc-cardbg);
+    width: 350px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+}
+
+
+
+.main-image-container {
+    width: 300px;
+    height: 300px;
+}
+.overlay {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    visibility: hidden;
+}
+.main-image-container:hover .overlay {
+    visibility: visible;
+}
+.overlay-icon {
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.overlay-bg {
+    width: inherit;
+    height: inherit;
+    background-color: var(--pc-cyan);
+    opacity: 50%;
+}
+.main-image {
+    width: inherit;
+    height: inherit;
+}
+
+
+
+.inner-container > * {
+    margin: 25px 0;
+}
+
+
+
+.text-title:active, .user-name:active {
+    color: var(--pc-cyan);
+}
+
+.text-title {
+    font-size: 20px;
+    color: var(--nc-white);
+    font-weight: var(--fw-bold);
+}
+.text-desc {
+    font-size: 18px;
+    font-weight: var(--fw-thin);
+}
+
+
+
+.info-container {
+    width: inherit;
+}
+
+
+
+.price-container, .time-container, .user-container {
+    display: inline-flex;
+}
+.small-icon {
+    margin-right: 10px;
+}
+
+
+
+.price-text {
+    color: var(--pc-cyan);
+    font-weight: var(--fw-bold);
+}
+
+
+
+.time-container {
+    float: right;
+}
+.time-text {
+    font-weight: var(--fw-regular);
+}
+
+
+
+.seperator {
+    background-color: var(--nc-seperator);
+    height: 1px;
+}
+
+
+
+.user-container {
+    margin-top: 20px;
+}
+.user-avatar {
+    margin-right: 20px;
+    width: 42px;
+    height: 42px;
+    border: 1px solid var(--nc-white);
+    border-radius: 100%;
+}
+.user-text {
+    margin: auto 0;
+}
+.user-name {
+    color: var(--nc-white);
+}
